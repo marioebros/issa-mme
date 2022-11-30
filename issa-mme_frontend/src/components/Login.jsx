@@ -2,7 +2,7 @@ import React from "react";
 import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
-import shareVideo from "../assets/share.mp4";
+import shareVideo from "../assets/pexels-tima-miroshnichenko-5615049.mp4";
 import logo from "../assets/logowhite.png";
 
 import { client } from "../client";
@@ -23,9 +23,9 @@ const Login = () => {
 
     client.createIfNotExists(doc)
       .then(() => {
-        navigate("/", { replace: true })
-      })
-  }
+        navigate("/", { replace: true });
+      });
+  };
 
   return (
     <div className="flex justify-start items-center flex-col h-screen">
@@ -47,7 +47,7 @@ const Login = () => {
 
           <div className="shadow-2xl">
             <GoogleLogin 
-              clientId={process.env.REACT_APP_GOOGLE_API_TOKEN}
+              clientId={`${process.env.REACT_APP_GOOGLE_API_TOKEN}`}
               render={(renderProps) => (
                 <button
                   type="button"
@@ -66,7 +66,7 @@ const Login = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Login
+export default Login;
