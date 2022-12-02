@@ -27,11 +27,8 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    effect
-    return () => {
-      cleanup
-    }
-  }, [input])
+    scrollRef.current.scrollTo(0, 0)
+  }, [])
 
   return (
     <div className="flex bg-gray-50 md:flex-row flex-col h-screen transaction-height duration-75 ease-out">
@@ -56,7 +53,10 @@ const Home = () => {
         </div>
       )}
       <div className="pb-2 flex-1 h-screen overflow-y-scroll" ref={scrollRef}>
-
+        <Routes>
+          <Route path="/user-profile/:userId" element={<UserProfile />} />
+          <Route path="/*" element={<Pins user={user && user} />} />
+        </Routes>
       </div>
     </div>
   )
