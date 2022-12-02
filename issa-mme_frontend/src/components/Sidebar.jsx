@@ -28,7 +28,8 @@ const Sidebar = ({ user, closeToggle }) => {
             to="/"
             className={({ isActive }) => isActive ? isActiveStyle : isNotActiveStyle}
           >
-
+            <RiHomeFill />
+            Home
           </NavLink>
         </div>
       </div>
