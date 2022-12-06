@@ -3,7 +3,7 @@ import GoogleLogin from "react-google-login";
 import { useNavigate } from "react-router-dom";
 import { FcGoogle } from "react-icons/fc";
 import shareVideo from "../assets/pexels-tima-miroshnichenko-5615049.mp4";
-import logo from "../assets/logowhite.png";
+import logo from "../assets/issa-mme-logo2.png";
 
 import { client } from "../client";
 
