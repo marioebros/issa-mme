@@ -19,7 +19,7 @@ const Login = () => {
       _type: "user",
       userName: name,
       image: imageUrl,
-    }
+    };
 
     client.createIfNotExists(doc)
       .then(() => {
