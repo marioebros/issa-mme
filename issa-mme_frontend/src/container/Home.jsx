@@ -42,7 +42,7 @@ const Home = () => {
             <img src={logo} alt="logo" className="w-28" />
           </Link>
           <Link to={`user-profile/${user?._id}`}>
-            <img src={user?.image} alt="logo" className="w-28" />
+            <img src={user?.image} alt="user-pic" className="w-9 h-9 rounded-full" />
           </Link>
         </div>
         {toggleSidebar && (
@@ -50,7 +50,7 @@ const Home = () => {
           <div className="absolute w-full flex justify-end items-center p-2">
             <AiFillCloseCircle fontSize={30} className="cursor-pointer" onClick={() => setToggleSidebar(false)} />
           </div>
-          <Sidebar user={user && user} closeToggle={setToggleSidebar} />
+          <Sidebar closeToggle={setToggleSidebar} user={user && user} />
         </div>
       )}
       </div>
@@ -61,7 +61,7 @@ const Home = () => {
         </Routes>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;
