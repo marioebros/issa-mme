@@ -7,7 +7,7 @@ import { Sidebar, UserProfile } from "../components";
 import Pins from "./Pins";
 import { userQuery } from "../utils/data";
 import { client } from "../client";
-import logo from "../assets/issa-mme-logo1.png";
+import logo from "../assets/issa-mme-logo2.png";
 
 const Home = () => {
   const [toggleSidebar, setToggleSidebar] = useState(false);
